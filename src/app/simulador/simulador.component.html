@@ -1,35 +1,37 @@
 <div class="simulador-container">
-  <h2>Simulador de Investimentos</h2>
-
   <div class="input-container">
-    <label for="valor"
-      >Valor do Investimento: {{ valorInvestimento | currency }}</label
-    >
-    <input
-      type="range"
-      id="valor"
-      [(ngModel)]="valorInvestimento"
-      min="1000"
-      max="1000000"
-      step="1000"
-      (input)="calcularRetorno()"
-    />
-  </div>
+    <div class="input-wrapper">
+      <label for="valor"
+        >Valor do Investimento: {{ valorInvestimento | currency }}</label
+      >
+      <input
+        class="range-bar"
+        type="range"
+        id="valor"
+        [(ngModel)]="valorInvestimento"
+        min="1000"
+        max="1000000"
+        step="1000"
+        (input)="calcularRetorno()"
+      />
+    </div>
 
-  <div class="input-container">
-    <label for="tempo"
-      >Tempo de Investimento: {{ tempoInvestimento }}
-      {{ tempoInvestimento > 11 ? "ano(s)" : "mês(es)" }}</label
-    >
-    <input
-      type="range"
-      id="tempo"
-      [(ngModel)]="tempoInvestimento"
-      min="1"
-      max="120"
-      step="1"
-      (input)="calcularRetorno()"
-    />
+    <div class="input-wrapper">
+      <label for="tempo"
+        >Tempo de Investimento: {{ tempoInvestimento }}
+        {{ tempoInvestimento > 11 ? "ano(s)" : "mês(es)" }}</label
+      >
+      <input
+        class="range-bar"
+        type="range"
+        id="tempo"
+        [(ngModel)]="tempoInvestimento"
+        min="1"
+        max="120"
+        step="1"
+        (input)="calcularRetorno()"
+      />
+    </div>
   </div>
 
   <div class="grafico-container">

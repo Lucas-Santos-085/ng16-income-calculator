@@ -17,21 +17,20 @@ export class SimuladorComponent {
   }
 
   calcularRetorno() {
-    const taxaPoupanca = 0.007; // 0.7% ao mês
-    const taxaLCI = 0.01; // 1% ao mês
+    const taxaPoupanca = 0.007;
+    const taxaLCI = 0.01;
 
     const meses = this.tempoInvestimento;
 
-    // Calculo do valor total investido + retorno com juros compostos
     this.valorTotalPoupanca =
       this.valorInvestimento * Math.pow(1 + taxaPoupanca, meses);
     this.valorTotalLCI = this.valorInvestimento * Math.pow(1 + taxaLCI, meses);
 
-    const retornoPoupanca = this.valorTotalPoupanca - this.valorInvestimento;
-    const retornoLCI = this.valorTotalLCI - this.valorInvestimento;
+    const retornoPoupanca = this.valorTotalPoupanca;
+    const retornoLCI = this.valorTotalLCI;
 
-    const alturaBase = 100; // Altura fixa da barra da poupança
-    const maxAlturaLCI = 400; // Altura máxima da barra do LCI
+    const alturaBase = 100;
+    const maxAlturaLCI = 200;
 
     if (retornoLCI === retornoPoupanca) {
       this.alturaLCI = alturaBase;

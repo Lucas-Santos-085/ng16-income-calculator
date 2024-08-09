@@ -1,18 +1,30 @@
 .simulador-container {
-  width: 1290px;
-  margin: 0 auto;
-  text-align: center;
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin: 0 auto; */
 }
 
 .input-container {
-  margin-bottom: 20px;
+  width: 40%;
+}
+
+.grafico-container {
+  width: 40%;
+}
+
+.input-wrapper {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
 }
 
 .grafico-container {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  height: 400px; /* Ajustado para a altura máxima */
+  height: 400px;
   margin-top: 20px;
   border: 1px solid #ccc;
   padding: 10px;
