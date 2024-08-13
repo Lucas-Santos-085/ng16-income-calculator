@@ -6,6 +6,17 @@
   /* margin: 0 auto; */
 }
 
+/* input[type="range"] {
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 10%,
+    #ddd 10%,
+    #ddd 100%
+  );
+} */
+
 .input-container {
   width: 40%;
 }
