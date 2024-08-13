@@ -66,12 +66,16 @@ export class SimuladorComponent {
   }
 
   converterSliderParaValor(sliderValue: number): number {
-    if (sliderValue <= 10) {
-      return sliderValue * 100; // 100 to 1000
-    } else if (sliderValue <= 19) {
-      return 1000 + (sliderValue - 10) * 1000; // 2000 to 10000
+    if (sliderValue === 1) {
+      return 30; // Inicialmente 30
+    } else if (sliderValue === 2) {
+      return 100; // Depois 100
+    } else if (sliderValue <= 11) {
+      return 100 + (sliderValue - 2) * 100; // 200 to 1000
+    } else if (sliderValue <= 20) {
+      return 1000 + (sliderValue - 11) * 1000; // 2000 to 10000
     } else {
-      return 10000 + (sliderValue - 19) * 10000; // 20000 and beyond
+      return 10000 + (sliderValue - 20) * 10000; // 20000 and beyond
     }
   }
 
